@@ -38,10 +38,23 @@ data_issues:
     true_levels: 3         # how many real categories there are after cleaning
 
 tracking:
-  experiment_name: null
-  best_run_id: null        # the MLflow run id of your v1 model
-  registered_model_name: null
-  champion_version: null
+  experiment_name: "mp277-picking-time"
+  best_run_id: "5195a7a40c934aa3ace412eec3531fba"        # the MLflow run id of your v1 model
+  registered_model_name: "mp277-picking-model"
+  champion_version: 1
+  tracking_uri: "sqlite:///mlflow.db"
+  champion_alias: "champion"
+  data_sha256: "18ebd23d5ff9b976e255eea4a3fbe1ccd0ad9e10a9f1621588adc53814c01b0a"
+  candidates:
+    candidate_1:
+      model_type: "Ridge"
+      val_mae: 18.8690
+    candidate_2:
+      model_type: "RandomForestRegressor"
+      val_mae: 27.2081
+    candidate_3:
+      model_type: "GradientBoostingRegressor"
+      val_mae: 20.4066
 
 monitoring:
   psi:                     # cleaned train.csv vs later.csv, 10 bins

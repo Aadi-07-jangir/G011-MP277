@@ -1,0 +1,33 @@
+# Pipeline parameters for MP277 (Warehouse Picking Time - Surat Fulfilment Centre)
+# Read with yaml.safe_load per STUDENT_HANDBOOK.md
+
+data:
+  train_path: "data/raw/train.csv"
+  later_path: "data/raw/later.csv"
+  holdout_path: "data/raw/holdout_features.csv"
+  target_column: "pick_seconds"
+
+split:
+  val_size: 0.2
+  random_state: 42
+
+models:
+  candidate_1:
+    model_type: "Ridge"
+    alpha: 1.0
+  candidate_2:
+    model_type: "RandomForestRegressor"
+    n_estimators: 100
+    max_depth: 8
+    random_state: 42
+  candidate_3:
+    model_type: "GradientBoostingRegressor"
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 4
+    random_state: 42
+
+tracking:
+  experiment_name: "mp277-picking-time"
+  registered_model_name: "mp277-picking-model"
+  tracking_uri: "sqlite:///mlflow.db"

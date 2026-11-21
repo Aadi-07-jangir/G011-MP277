@@ -3,3 +3,6 @@ data/raw/later.csv
 __pycache__/
 .venv/
 mlruns/
+mlartifacts/
+.pytest_cache/
+*.pyc

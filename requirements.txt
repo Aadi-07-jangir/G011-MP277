@@ -1,0 +1,17 @@
+# SCSE3040 MLOps Mini Project (Group G011, Problem MP277)
+# Pinned dependencies per STUDENT_HANDBOOK.md
+
+# Mandatory Handbook Dependencies
+pandas==2.2.3
+scikit-learn==1.6.1
+mlflow==3.18.0
+pyyaml==6.0.3
+joblib==1.4.2
+cloudpickle==3.1.1
+pytest==8.3.4
+
+# Supporting & API Testing Dependencies
+numpy==2.2.3
+pydantic==2.14.4
+fastapi==0.115.11
+httpx==0.28.1
